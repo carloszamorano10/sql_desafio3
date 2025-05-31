@@ -31,3 +31,5 @@ CREATE TABLE Comentarios (
     usuario_id BIGINT,
     post_id BIGINT
 );
+
+-- Ingreso de datos:
