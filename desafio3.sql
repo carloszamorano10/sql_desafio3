@@ -119,4 +119,17 @@ ORDER BY contenido_comentario;
 
 -- Requerimiento 9:
 
+SELECT DISTINCT ON (usuario_id) 
+DATE(fecha_creacion) AS fecha_creacion,
+contenido,
+usuario_id
+FROM Comentarios 
+JOIN usuarios ON Comentarios.usuario_id = usuarios.id
+ORDER BY usuario_id, fecha_creacion DESC;
+
 -- Requerimiento 10:
+
+SELECT usuarios.email
+FROM usuarios
+LEFT JOIN Comentarios ON usuarios.id = Comentarios.usuario_id
+ORDER BY Comentarios.contenido DESC LIMIT 2;
