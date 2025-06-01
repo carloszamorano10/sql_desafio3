@@ -1,5 +1,4 @@
---creacion de tablas
-
+--Creacion de tablas:
 -- Tabla Usuarios:
 
 CREATE TABLE usuarios (
